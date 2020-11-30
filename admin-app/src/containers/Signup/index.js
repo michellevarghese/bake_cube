@@ -13,7 +13,7 @@ const Signup = (props) => {
     <Layout>
       <Container>
         <Row style={{marginTop: "50px"}}>
-          <Col md={{ span: 6, offset: 3 }}>
+          <Col md={{ span: 6, offset: 4 }}>
             <Form>
               <Row>
                 <Col md={6}>
