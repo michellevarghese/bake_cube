@@ -4,6 +4,7 @@ const env= require('dotenv');
 const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 const path =require('path');
+const cors =require('cors');
 
 //routes
 const authRoutes=require('./routes/auth');
@@ -31,6 +32,8 @@ mongoose.connect(
         });
 
 app.use(express.json());
+app.use(cors());
+
 app.use('/public',express.static(path.join(__dirname,'uploads')));
 
 app.use('/api',authRoutes);
